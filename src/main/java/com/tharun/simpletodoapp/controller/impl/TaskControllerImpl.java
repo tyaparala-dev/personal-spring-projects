@@ -17,12 +17,10 @@ public class TaskControllerImpl implements TaskController {
     private final TaskService taskService;
 
     @Override
-    public List<TaskResponseDto> getAllTasks() {
-        return taskService.getAllTasks().stream().map(taskService::convertToDto).toList();
-    }
-
-    @Override
     public List<TaskResponseDto> getTasksByStatus(String status) {
+        if (status == null){
+            return taskService.getAllTasks().stream().map(taskService::convertToDto).toList();
+        }
         return taskService.getTasksByTaskStatus(TaskStatus.valueOf(status))
                 .stream().map(taskService::convertToDto).toList();
     }

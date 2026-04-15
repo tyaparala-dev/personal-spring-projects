@@ -10,10 +10,7 @@ import java.util.List;
 public interface TaskController {
 
     @GetMapping
-    List<TaskResponseDto> getAllTasks();
-
-    @GetMapping("/{status}")
-    List<TaskResponseDto> getTasksByStatus(@PathVariable String status);
+    List<TaskResponseDto> getTasksByStatus(@RequestParam(required = false) String status);
 
     @GetMapping("/{id}")
     TaskResponseDto getTaskById(@PathVariable long id);

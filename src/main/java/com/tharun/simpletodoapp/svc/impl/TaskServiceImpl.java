@@ -24,7 +24,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public List<Task> getTasksByTaskStatus(TaskStatus taskStatus) {
-        return null;
+        return taskRepository.findByTaskStatus(taskStatus);
     }
 
     @Override
