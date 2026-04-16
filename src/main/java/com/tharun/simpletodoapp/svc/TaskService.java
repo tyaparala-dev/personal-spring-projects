@@ -15,13 +15,9 @@ public interface TaskService {
 
     Task getTaskById(long id);
 
-    boolean updateTaskStatus(long id, TaskStatus status);
+    void updateTaskStatus(long id, TaskStatus status);
 
     void createTask(Task task);
 
     void clearAllTasks();
-
-    TaskResponseDto convertToDto(Task task);
-
-    Task convertToDomain(TaskRequestDto dto);
 }

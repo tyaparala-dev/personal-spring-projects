@@ -2,6 +2,10 @@ package com.tharun.simpletodoapp.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.util.Date;
 
 @Entity
 @Table(name = "tasks")
@@ -21,5 +25,11 @@ public class Task {
     @Column(name="task_status", nullable = false)
     @Enumerated(EnumType.STRING)
     private TaskStatus taskStatus;
+
+    @CreationTimestamp
+    private Date createdAt;
+
+    @UpdateTimestamp
+    private Date updatedAt;
 
 }
