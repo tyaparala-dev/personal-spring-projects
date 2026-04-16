@@ -1,4 +1,8 @@
 # personal-spring-projects
-Personal Spring Projects
+Simple To-do Application
 
-All the projects under this repository contains the personal spring projects.
+A Simple To-do Application made using Spring Boot Application. This is an application connected to Postgres Database.
+
+The application can be used to list out of different tasks with different status.
+
+A new task added will be "OPEN" by default and can be changed to "IN_PROGRESS", "CLOSED" status.
