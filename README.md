@@ -1,5 +1,4 @@
-# personal-spring-projects
-Simple To-do Application
+# Simple To-do Application
 
 A Simple To-do Application made using Spring Boot Application. This is an application connected to Postgres Database.
 
